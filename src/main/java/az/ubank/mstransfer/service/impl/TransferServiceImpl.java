@@ -26,13 +26,13 @@ public class TransferServiceImpl implements TransferService {
 
     @Override
     @Transactional
-    public String makeTransfer(String customerPin, TransferDto transferDto) {
+    public String makeTransfer(String senderCustomerPin, TransferDto transferDto) {
         log.info("service makeTransfer started with Transfer DTO: {}", transferDto);
         checkAccountIsSame(transferDto);
         checkTransferAmount(transferDto);
         AccountDto senderAccount = accountService.getById(transferDto.getSenderAccountId());
         AccountDto receiverAccount = accountService.getById(transferDto.getReceiverAccountId());
-        checkSenderCustomerHaveAccount(customerPin, senderAccount);
+        checkSenderCustomerHaveAccount(senderCustomerPin, senderAccount);
         checkAccountStatusIsActive(senderAccount);
         checkAccountStatusIsActive(receiverAccount);
         checkSenderEnoughMoney(senderAccount, transferDto.getTransferAmount());
