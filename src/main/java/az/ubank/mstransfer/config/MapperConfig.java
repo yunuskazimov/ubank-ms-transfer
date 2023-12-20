@@ -1,6 +1,6 @@
 package az.ubank.mstransfer.config;
 
-import az.unibank.unitechmstransfer.mapper.TransferMapper;
+import az.ubank.mstransfer.mapper.TransferMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
