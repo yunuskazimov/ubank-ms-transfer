@@ -16,16 +16,4 @@ public interface AccountClientFeign {
     @PostMapping()
     AccountDto updateAccountBalance(@RequestBody() AccountDto accountDto);
 
-
-//    public AccountDto getById(String id) {
-////        log.info("client service getById started Account ID: {}", id);
-//        String url = String.format("%s/%s/%s", apiUrl, "id", id);
-//        return restTemplate.getForObject(url, AccountDto.class);
-//    }
-
-//    public AccountDto updateAccountBalance(AccountDto accountDto) {
-//        log.info("client service updateAccountBalance started Account ID: {}", accountDto.getAccountId());
-//        return restTemplate.postForObject(apiUrl, accountDto, AccountDto.class);
-//    }
-
 }
