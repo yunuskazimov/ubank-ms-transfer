@@ -1,4 +1,4 @@
-package az.ubank.mstransfer.dto.exception;
+package az.ubank.mstransfer.exception;
 
 public class ErrorCodes {
     public static final String UNEXPECTED_EXCEPTION = "transfer.unexpected-exception";

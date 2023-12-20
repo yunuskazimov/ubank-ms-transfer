@@ -1,4 +1,4 @@
-package az.ubank.mstransfer.dto.exception;
+package az.ubank.mstransfer.exception;
 
 import lombok.Getter;
 
